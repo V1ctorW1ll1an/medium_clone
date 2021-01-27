@@ -13,7 +13,24 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+
+    // eslint rules
+    'space-before-function-paren': 'off',
+    // typescript rules
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none', // 'none' or 'semi' or 'comma'
+          requireLast: true
+        },
+        singleline: {
+          delimiter: 'semi', // 'semi' or 'comma'
+          requireLast: false
+        }
+      }
+    ]
   },
   overrides: [
     {
