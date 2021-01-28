@@ -1,0 +1,93 @@
+button[base-button],
+button[base-button]:focus,
+button[base-button]:active {
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+input[base-input],
+input[base-input]:focus,
+input[base-input]:active {
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 2rem;
+  margin: 2rem 0;
+  font-size: 1.7rem;
+  height: 4.6rem;
+  padding: 0 2rem;
+}
+
+/* centraliza o conteudo de qualquer container */
+*[flex-center] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*[flex-center-column] {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*[logo-text] {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+*[gray-line] {
+  height: 0.1rem;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+*[loader] {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.6s linear infinite;
+  /* Safari */
+  animation: spin 0.6s linear infinite;
+}
+
+*[custom-scrollbar] {
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
