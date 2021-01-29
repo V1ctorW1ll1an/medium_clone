@@ -1,9 +1,12 @@
 module.exports = {
   transpileDependencies: ['vuetify'],
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   css: {
     loaderOptions: {
-      sass: {
-        prependData: "@import '@/assets/scss/_index.scss'"
+      scss: {
+        prependData: "@import '@/assets/scss/_index.scss';"
       }
     }
   }
