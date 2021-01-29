@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { home } from '@/modules/home_page/home_store/index'
+import { home } from '@/modules/home_page/store/index'
 
 Vue.use(Vuex)
 
