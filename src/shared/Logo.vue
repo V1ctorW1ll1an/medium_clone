@@ -19,10 +19,9 @@ export default class Logo extends Vue {}
 <style lang="scss">
 .logo-container {
   .logo {
-    max-height: 2.5rem;
-    max-width: 16.2rem;
-    fill: rgba($color: #000000, $alpha: 1);
-    vertical-align: middle;
+    height: 2.5rem;
+    width: 16.2rem;
+    fill: #000;
   }
 }
 </style>
