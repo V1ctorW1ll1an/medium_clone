@@ -24,17 +24,13 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-size: 62.5% !important;
-  scroll-behavior: smooth !important;
-  height: 100%;
-  width: 100%;
+.v-application {
   font-family: 'Montserrat', sans-serif !important;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  font-size: 1.6rem;
+html {
+  font-size: 62.5% !important;
 }
 </style>
