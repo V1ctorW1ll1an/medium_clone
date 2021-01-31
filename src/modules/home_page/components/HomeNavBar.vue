@@ -1,37 +1,21 @@
 <template>
   <div class="nav-bar__container">
     <nav class="nav-bar__items">
-      <ul class="d-flex
-      flex-row
-      justify-center
-      align-center">
-        <li>
-          <a href="#">
-            Our Story
-          </a>
+      <ul class="d-flex flex-row justify-center align-center">
+        <li class="li__hide">
+          <a href="#"> Our Story </a>
+        </li>
+        <li class="li__hide">
+          <a href="#"> Membership </a>
+        </li>
+        <li class="li__hide">
+          <a href="#"> Write </a>
+        </li>
+        <li class="hide__xm">
+          <a href="#"> Sign In </a>
         </li>
         <li>
-          <a href="#">
-            Membership
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Write
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sign In
-          </a>
-        </li>
-        <li>
-          <v-btn
-            text
-            color="#fff"
-          >
-            Get started
-          </v-btn>
+          <v-btn text color="#fff"> Get started </v-btn>
         </li>
       </ul>
     </nav>
@@ -55,6 +39,19 @@ export default class HomeNavBar extends Vue {}
 
       li {
         padding: 1.45rem;
+
+        &.li__hide {
+          @media only screen and (max-width: 800px) {
+            display: none;
+          }
+        }
+
+        &.hide__xm {
+          @media only screen and (max-width: 551px) {
+            display: none;
+          }
+        }
+
         a {
           text-decoration: none;
           color: #554518;
