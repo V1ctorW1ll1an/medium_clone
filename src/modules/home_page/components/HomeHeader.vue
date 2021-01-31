@@ -8,7 +8,7 @@
       <v-app-bar
         color="transparent"
         flat
-        class="default-max-width p-0"
+        class="default-max-width default-margin p-0"
         height="76"
       >
         <Logo />
