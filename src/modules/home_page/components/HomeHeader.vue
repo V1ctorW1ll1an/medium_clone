@@ -1,14 +1,18 @@
 <template>
   <header
-    class="home__header header--yellow-bg w-100 d-flex justify-center align-center flex-column"
+    :style="{ backgroundColor: headerBg }"
+    class="home__header w-100 d-flex align-center flex-column transition__color"
   >
     <!-- container -->
-    <div class="w-100 border__bottom d-flex justify-center align-center">
+    <div
+      :style="{ backgroundColor: headerBg }"
+      class="w-100 border__bottom po-fixed d-flex justify-center align-center transition__color"
+    >
       <!-- Header -->
       <v-app-bar
-        color="transparent"
+        :color="headerBg"
         flat
-        class="default-max-width default-margin p-0"
+        class="default-max-width default-margin p-0 transition__color"
         height="76"
       >
         <Logo />
@@ -17,7 +21,7 @@
     </div>
 
     <!-- container -->
-    <div class="w-100 border__bottom d-flex justify-center align-center">
+    <div class="w-100 border__bottom d-flex justify-center align-center mt-77">
       <!-- section -->
       <HeaderSection />
     </div>
@@ -26,6 +30,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { Getter } from 'vuex-class'
 import Logo from '@/shared/Logo.vue'
 import NavBar from '@/modules/home_page/components/HomeNavBar.vue'
 import HeaderSection from '@/modules/home_page/components/HeaderSection.vue'
@@ -37,13 +42,28 @@ import HeaderSection from '@/modules/home_page/components/HeaderSection.vue'
     HeaderSection
   }
 })
-export default class HomeHeader extends Vue {}
+export default class HomeHeader extends Vue {
+  @Getter('getHeaderBg', { namespace: 'home' }) headerBg?: string
+}
 </script>
 
 <style lang="scss" >
+.header--yellow-bg {
+  background-color: #ffc017;
+}
+
+.transition__color {
+  transition: background-color 300ms linear !important;
+}
+
 .home__header {
-  &.header--yellow-bg {
-    background-color: #ffc017;
+  .mt-77 {
+    margin-top: 7.7rem;
+  }
+
+  z-index: 100;
+  .po-fixed {
+    position: fixed;
   }
 
   .border__bottom {
