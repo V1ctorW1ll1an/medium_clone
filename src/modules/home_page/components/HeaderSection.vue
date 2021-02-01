@@ -20,9 +20,7 @@
           </h3>
         </div>
         <div class="button__container">
-          <v-btn class="ma-2 custom__button" outlined color="rgb(0, 0, 0)">
-            Get Started
-          </v-btn>
+          <button class="custom__button">Get Started</button>
         </div>
       </div>
     </div>
@@ -95,6 +93,11 @@ export default class extends Vue {}
         line-height: 2.4rem;
         font-weight: 400;
         height: 4.2rem;
+        border: 1px solid rgb(12, 12, 12);
+        outline: none;
+        border-radius: 0.5rem;
+        color: rgb(12, 12, 12);
+        user-select: none;
       }
 
       .custom__subtitle__container {
