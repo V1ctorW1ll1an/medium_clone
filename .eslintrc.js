@@ -18,6 +18,8 @@ module.exports = {
     // eslint rules
     'space-before-function-paren': 'off',
     // typescript rules
+
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
