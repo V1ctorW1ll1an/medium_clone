@@ -12,8 +12,8 @@
 }
 
 .default-margin{
-  @media only screen and (min-width: 729px){
-    margin: 0 6.4rem !important;
+  @media only screen and (max-width: 1195px){
+    margin: 1.6rem !important;
   }
   @media only screen and (max-width: 728px){
     margin: 0 4.8rem !important;
