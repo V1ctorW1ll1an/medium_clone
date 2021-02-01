@@ -1,3 +1,4 @@
 export default {
-  hello: 'Hello world'
+  headerBg: '#ffc017',
+  headerBtnBg: '#000000'
 }

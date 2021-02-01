@@ -1,7 +1,10 @@
 import { SettingsState } from './types'
 
 export default {
-  getMessage(state: SettingsState): string {
-    return state.hello
+  getHeaderBg(state: SettingsState): string {
+    return state.headerBg
+  },
+  getHeaderBtnBg(state: SettingsState): string {
+    return state.headerBtnBg
   }
 }

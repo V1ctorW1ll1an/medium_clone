@@ -1,4 +1,4 @@
 export interface SettingsState {
-  hello: string
-  error: boolean
+  headerBg: string
+  headerBtnBg: string
 }

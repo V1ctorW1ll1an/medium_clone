@@ -1,7 +1,10 @@
 import { SettingsState } from './types'
 
 export default {
-  setMessage(state: SettingsState, message: string): void {
-    state.hello = message
+  setHeaderBg(state: SettingsState, headerBg: string): void {
+    state.headerBg = headerBg
+  },
+  setHeaderBtnBg(state: SettingsState, headerBtnBg: string): void {
+    state.headerBtnBg = headerBtnBg
   }
 }
