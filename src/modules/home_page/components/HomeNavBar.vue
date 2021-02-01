@@ -15,7 +15,9 @@
           <a href="#"> Sign In </a>
         </li>
         <li>
-          <v-btn text color="#fff"> Get started </v-btn>
+          <v-btn :style="{ backgroundColor: headerBtnBg }" text color="#fff">
+            Get started
+          </v-btn>
         </li>
       </ul>
     </nav>
@@ -24,9 +26,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { Getter } from 'vuex-class'
 
 @Component
-export default class HomeNavBar extends Vue {}
+export default class HomeNavBar extends Vue {
+  @Getter('getHeaderBtnBg', { namespace: 'home' }) headerBtnBg?: string
+}
 </script>
 
 <style lang="scss">
@@ -61,7 +66,6 @@ export default class HomeNavBar extends Vue {}
     }
 
     .v-btn {
-      background-color: #191919;
       height: 3.8rem !important;
       width: 10.5rem !important;
       font-size: 1.4rem;
