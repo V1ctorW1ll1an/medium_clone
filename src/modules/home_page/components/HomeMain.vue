@@ -1,11 +1,18 @@
 <template>
-  <main class="home__main">hello</main>
+  <main class="home__main">
+    <HomeTopicSection />
+  </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { Mutation } from 'vuex-class'
-@Component
+import HomeTopicSection from '@/modules/home_page/components/HomeTopicSection.vue'
+@Component({
+  components: {
+    HomeTopicSection
+  }
+})
 export default class HomeMain extends Vue {
   @Mutation('setHeaderBg', { namespace: 'home' }) setHeaderBg: any
   @Mutation('setHeaderBtnBg', { namespace: 'home' }) headerBtnBg: any
