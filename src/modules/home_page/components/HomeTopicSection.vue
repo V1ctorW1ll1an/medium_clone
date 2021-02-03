@@ -1,20 +1,24 @@
 <template>
   <section
-    class="home__topic__section d-flex flex-column justify-center align-center"
+    class="homeTopicSection d-flex flex-column justify-center align-center"
   >
-    <div class="container w-100">
-      <div class="custom__padding">
-        <div class="topic__header d-flex flex-row align-center">
+    <div class="homeTopicSection__container w-100">
+      <div class="homeTopicSection__custom--padding">
+        <div class="homeTopicSection__header d-flex flex-row align-center">
           <span>
             <FontAwesomeIcon :style="iconStyle" :icon="['fas', 'chart-line']" />
           </span>
           <span>
-            <p class="m-0 custom-paragraph">Trending on Medium</p>
+            <p class="m-0 homeTopicSection__paragraph--custom">
+              Trending on Medium
+            </p>
           </span>
         </div>
 
-        <div class="topic__main w-100">
-          <div class="topic__wrapper d-flex flex-wrap align-start flex-row">
+        <div class="homeTopicSection__main w-100">
+          <div
+            class="homeTopicSection__wrapper d-flex flex-wrap align-start flex-row"
+          >
             <!-- FLEX ITENS -->
             <div class="item flex-grow-0 w-100">item1</div>
             <div class="item flex-grow-0 w-100">item2</div>
@@ -47,30 +51,32 @@ export default class HomeTopicSection extends Vue {
 </script>
 
 <style lang="scss">
-.home__topic__section {
+.homeTopicSection {
+  $blockName: #{&};
+
   margin-top: 1px solid rgb(12, 12, 12);
 
-  .container {
+  #{$blockName}__container {
     max-width: 119.2rem;
     min-width: 0;
     margin: 0 6.4rem;
 
-    .custom__padding {
+    #{$blockName}__custom--padding {
       padding-top: 4rem;
       padding-bottom: 1.6rem;
 
-      .topic__header {
+      #{$blockName}__header {
         margin-bottom: 1.6rem;
 
-        .custom-paragraph {
+        #{$blockName}__paragraph--custom {
           font-size: 1.4rem;
           text-transform: uppercase;
           font-weight: 700;
         }
       }
 
-      .topic__main {
-        .topic__wrapper {
+      #{$blockName}__main {
+        #{$blockName}__wrapper {
           margin: 0 -1.6rem;
           width: calc(100% + 32px);
 

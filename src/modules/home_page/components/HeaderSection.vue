@@ -1,26 +1,26 @@
 <template>
-  <section class="header__section w-100 default-max-width p-0">
-    <div class="default-margin header__section__container">
-      <div class="title__container h-100 d-flex flex-column">
-        <div class="custom__title">
+  <section class="headerSection w-100 default-max-width p-0">
+    <div class="default-margin headerSection__container">
+      <div class="headerSection__title h-100 d-flex flex-column">
+        <div>
           <h2>Where good ideas find you</h2>
         </div>
-        <div class="title__space"></div>
-        <div class="custom__subtitle__container">
+        <div class="headerSection__title--space"></div>
+        <div class="headerSection__subtitle">
           <h3>
-            <span class="custom__subtitle">
+            <span class="headerSection__subtitle--custom">
               Read and share new perspectives on just about any topic.
               Everyone’s welcome.
             </span>
-            <span class="custom__subtitle">
-              <a class="custom__subtitle__link" href="#" rel="noopener"
+            <span class="headerSection__subtitle--custom">
+              <a class="headerSection__link" href="#" rel="noopener"
                 >Learn more.</a
               >
             </span>
           </h3>
         </div>
-        <div class="button__container">
-          <button class="custom__button">Get Started</button>
+        <div>
+          <button class="headerSection__customBtn">Get Started</button>
         </div>
       </div>
     </div>
@@ -35,7 +35,9 @@ export default class extends Vue {}
 </script>
 
 <style lang="scss">
-.header__section {
+.headerSection {
+  $blockName: #{&};
+
   background-image: url('https://miro.medium.com/max/770/1*qcAZgT4Sk37MPSTGBH2KUw.png');
   background-position: calc(100% - 32px) calc(100% - 59px);
   background-repeat: no-repeat;
@@ -56,10 +58,10 @@ export default class extends Vue {}
     background-position: calc(100% + 126px) calc(100% - 28px);
   }
 
-  .header__section__container {
+  #{$blockName}__container {
     height: 40rem;
 
-    .title__container {
+    #{$blockName}__title {
       width: 55rem;
       padding: 3.3rem 0 5.1rem 0;
 
@@ -82,11 +84,11 @@ export default class extends Vue {}
         }
       }
 
-      .title__space {
+      #{$blockName}__title--space {
         flex: 1 1 0%;
       }
 
-      .custom__button {
+      #{$blockName}__customBtn {
         font-size: 1.6rem;
         text-transform: capitalize;
         width: 12.8rem;
@@ -100,16 +102,16 @@ export default class extends Vue {}
         user-select: none;
       }
 
-      .custom__subtitle__container {
+      #{$blockName}__subtitle {
         margin-bottom: 2.5rem;
 
-        .custom__subtitle {
+        #{$blockName}__subtitle--custom {
           font-size: 1.8rem;
           font-weight: 400;
           color: rgb(41, 41, 41);
           line-height: 1.4rem;
 
-          .custom__subtitle__link {
+          #{$blockName}__link {
             border-bottom: 1px solid rgb(41, 41, 41);
             font-size: 1.8rem;
             text-decoration: none;

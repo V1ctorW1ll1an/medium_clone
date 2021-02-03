@@ -1,18 +1,18 @@
 <template>
   <header
     :style="{ backgroundColor: headerBg }"
-    class="home__header w-100 d-flex align-center flex-column transition__color"
+    class="homeHeader w-100 d-flex align-center flex-column bgTransition"
   >
     <!-- container -->
     <div
       :style="{ backgroundColor: headerBg }"
-      class="w-100 border__bottom po-fixed d-flex justify-center align-center transition__color"
+      class="w-100 homeHeader__borderBottom homeHeader--fixed d-flex justify-center align-center bgTransition"
     >
       <!-- Header -->
       <v-app-bar
         :color="headerBg"
         flat
-        class="default-max-width default-margin p-0 transition__color"
+        class="default-max-width default-margin p-0 bgTransition"
         height="76"
       >
         <Logo />
@@ -21,7 +21,9 @@
     </div>
 
     <!-- container -->
-    <div class="w-100 border__bottom d-flex justify-center align-center mt-77">
+    <div
+      class="w-100 homeHeader__borderBottom d-flex justify-center align-center homeHeader--mt77"
+    >
       <!-- section -->
       <HeaderSection />
     </div>
@@ -48,25 +50,22 @@ export default class HomeHeader extends Vue {
 </script>
 
 <style lang="scss" >
-.header--yellow-bg {
-  background-color: #ffc017;
-}
-
-.transition__color {
+.bgTransition {
   transition: background-color 300ms linear !important;
 }
 
-.home__header {
-  .mt-77 {
+.homeHeader {
+  $blockName: #{&};
+
+  #{$blockName}--mt77 {
     margin-top: 7.7rem;
   }
 
-  z-index: 100;
-  .po-fixed {
+  #{$blockName}--fixed {
     position: fixed;
   }
 
-  .border__bottom {
+  #{$blockName}__borderBottom {
     border-bottom: 0.1rem solid rgb(41, 41, 41);
   }
 

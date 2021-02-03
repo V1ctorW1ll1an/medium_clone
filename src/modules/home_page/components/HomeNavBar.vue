@@ -1,17 +1,17 @@
 <template>
-  <div class="nav-bar__container">
-    <nav class="nav-bar__items">
+  <div class="homeNavBar">
+    <nav class="homeNavBar__item">
       <ul class="d-flex flex-row justify-center align-center">
-        <li class="li__hide">
+        <li class="homeNavBar__item--hide">
           <a href="#"> Our Story </a>
         </li>
-        <li class="li__hide">
+        <li class="homeNavBar__item--hide">
           <a href="#"> Membership </a>
         </li>
-        <li class="li__hide">
+        <li class="homeNavBar__item--hide">
           <a href="#"> Write </a>
         </li>
-        <li class="hide__xm">
+        <li class="homeNavBar__item--xm">
           <a href="#"> Sign In </a>
         </li>
         <li>
@@ -35,8 +35,9 @@ export default class HomeNavBar extends Vue {
 </script>
 
 <style lang="scss">
-.nav-bar__container {
-  .nav-bar__items {
+.homeNavBar {
+  $blockName: #{&};
+  #{$blockName}__item {
     ul {
       list-style-type: none;
       margin: 0;
@@ -45,13 +46,13 @@ export default class HomeNavBar extends Vue {
       li {
         padding: 1.45rem;
 
-        &.li__hide {
+        #{$blockName}__item--hide {
           @media only screen and (max-width: 800px) {
             display: none;
           }
         }
 
-        &.hide__xm {
+        #{$blockName}__item--xm {
           @media only screen and (max-width: 551px) {
             display: none;
           }

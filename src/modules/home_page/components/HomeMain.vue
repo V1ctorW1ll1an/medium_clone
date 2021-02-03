@@ -1,5 +1,5 @@
 <template>
-  <main class="home__main">
+  <main class="homeMain">
     <HomeTopicSection />
   </main>
 </template>
@@ -37,7 +37,7 @@ export default class HomeMain extends Vue {
   }
 
   getPosition() {
-    const element = document.querySelector('.home__main') as HTMLElement
+    const element = document.querySelector('.homeMain') as HTMLElement
 
     const distance = element.getBoundingClientRect()
 
@@ -47,7 +47,7 @@ export default class HomeMain extends Vue {
 </script>
 
 <style lang="scss">
-.home__main {
+.homeMain {
   height: 1500px;
 }
 </style>
